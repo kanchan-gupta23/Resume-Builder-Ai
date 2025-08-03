@@ -1,10 +1,13 @@
 import React from "react";
 import ResumeTemplate from "./ResumeTemplate";
+import { BrowserRouter } from "react-router-dom";
 
 function App() {
   return (
     <div>
-      <ResumeTemplate />
+      <BrowserRouter>
+        <ResumeTemplate />
+      </BrowserRouter>
     </div>
   );
 }

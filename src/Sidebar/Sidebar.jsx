@@ -1,6 +1,6 @@
-'use client';
+"use client";
 
-import React, { useState } from 'react';
+import React, { useRef, useState } from "react";
 import {
   FaArrowLeft,
   FaArrowRight,
@@ -10,17 +10,17 @@ import {
   FaChevronDown,
   FaChevronUp,
   FaUserCircle,
-} from 'react-icons/fa';
+} from "react-icons/fa";
 
 const Sidebar = ({ isOpen, toggleSidebar }) => {
   const [showEnhanceDropdown, setShowEnhanceDropdown] = useState(false);
 
   return (
-    <div className="fixed top-0 left-0 h-full z-50 flex">
+    <div className="fixed top-[10vh] left-0 h-full z-50 flex">
       {/* Sidebar Container */}
       <div
         className={`transition-all duration-300 ease-in-out shadow-lg overflow-hidden bg-white text-gray-900
-        ${isOpen ? 'w-[240px] md:w-[280px]' : 'w-[48px] md:w-[15px]'}`}
+        ${isOpen ? "w-[240px] md:w-[280px]" : "w-[48px] md:w-[15px]"}`}
       >
         {/* Profile */}
         {isOpen && (
@@ -47,11 +47,21 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
               {showEnhanceDropdown && (
                 <div className="ml-2 mt-2 space-y-1 text-xs md:text-sm">
-                  <button className="block w-full text-left cursor-pointer">⚪ Rewrite Summary</button>
-                  <button className="block w-full text-left cursor-pointer">⚪ Suggest Skills</button>
-                  <button className="block w-full text-left cursor-pointer">⚪ Improve Experience</button>
-                  <button className="block w-full text-left cursor-pointer">⚪ Add Keywords</button>
-                  <button className="block w-full text-left cursor-pointer">⚪ AI Cover Letter</button>
+                  <button className="block w-full text-left cursor-pointer">
+                    ⚪ Rewrite Summary
+                  </button>
+                  <button className="block w-full text-left cursor-pointer">
+                    ⚪ Suggest Skills
+                  </button>
+                  <button className="block w-full text-left cursor-pointer">
+                    ⚪ Improve Experience
+                  </button>
+                  <button className="block w-full text-left cursor-pointer">
+                    ⚪ Add Keywords
+                  </button>
+                  <button className="block w-full text-left cursor-pointer">
+                    ⚪ AI Cover Letter
+                  </button>
                 </div>
               )}
             </div>
@@ -75,7 +85,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
       {/* Toggle Button */}
       <div
-        className="bg-transparent text-white p-2 rounded-r shadow-md cursor-pointer"
+        className="bg-transparent text-black p-2 rounded-r shadow-md cursor-pointer"
         onClick={toggleSidebar}
       >
         {isOpen ? <FaArrowLeft /> : <FaArrowRight />}
