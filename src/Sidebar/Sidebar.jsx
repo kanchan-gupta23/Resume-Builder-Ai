@@ -19,7 +19,7 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
     <div className="fixed top-[10vh] left-0 h-full z-50 flex">
       {/* Sidebar Container */}
       <div
-        className={`transition-all duration-300 ease-in-out shadow-lg overflow-hidden bg-white text-gray-900
+        className={`transition-all duration-300 ease-in-out shadow-lg overflow-hidden bg-white  text-gray-900
         ${isOpen ? "w-[240px] md:w-[280px]" : "w-[48px] md:w-[15px]"}`}
       >
         {/* Profile */}
@@ -32,9 +32,9 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
 
         {/* Options */}
         {isOpen && (
-          <div className="p-3 md:p-4 space-y-4">
+          <div className="p-3 flex-col items-start justify-start md:p-4 space-y-4">
             {/* Enhance with AI */}
-            <div className="border-white px-3 md:px-4 py-2 rounded-2xl border-2">
+            <div className="border-white px-3 md:px-4 py-2  rounded-2xl border-2">
               <button
                 className="flex items-center justify-between w-full text-sm md:text-base"
                 onClick={() => setShowEnhanceDropdown(!showEnhanceDropdown)}
@@ -67,15 +67,15 @@ const Sidebar = ({ isOpen, toggleSidebar }) => {
             </div>
 
             {/* Download PDF */}
-            <div className="border-white px-3 md:px-4 py-2 rounded-2xl border-2">
-              <button className="flex items-center justify-center gap-2 w-full text-sm md:text-base cursor-pointer">
+            <div className="border-white px-3 md:px-4 py-2   rounded-2xl border-2">
+              <button className="flex items-center  gap-2 w-full text-sm md:text-base cursor-pointer">
                 <FaFilePdf /> Download PDF
               </button>
             </div>
 
             {/* Share PDF */}
             <div className="border-white px-3 md:px-4 py-2 rounded-2xl border-2">
-              <button className="flex items-center justify-center gap-2 w-full text-sm md:text-base cursor-pointer">
+              <button className="flex items-center  gap-2 w-full text-sm md:text-base cursor-pointer">
                 <FaShareAlt /> Share PDF
               </button>
             </div>
