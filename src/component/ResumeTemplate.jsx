@@ -1,8 +1,8 @@
 "use client";
 import React, { useState, useRef, useEffect } from "react";
-import { useResume } from "./context/ResumeContext";
-import Sidebar from "./Sidebar/Sidebar";
-import Navbar from "./Navbar/Navbar";
+import { useResume } from "../context/ResumeContext";
+import Sidebar from "../Sidebar/Sidebar";
+import Navbar from "../Navbar/Navbar";
 
 const Edit = () => {
   const { resumeData, setResumeData } = useResume();
@@ -118,8 +118,10 @@ const Edit = () => {
             </div>
 
             {/* SUMMARY */}
-            <div className="mb-6">
-              <h3 className="text-lg font-semibold mb-1">Summary</h3>
+            <div className="mb-6  ">
+              <h3 className="text-lg font-semibold mb-1 pb-1 border-b-2">
+                Summary
+              </h3>
               {isEditing ? (
                 <textarea
                   value={localData.summary}
@@ -138,7 +140,9 @@ const Edit = () => {
 
             {/* SKILLS */}
             <div className="mb-6">
-              <h3 className="text-lg font-semibold mb-1">Skills</h3>
+              <h3 className="text-lg font-semibold mb-1 pb-1 border-b-2">
+                Skills
+              </h3>
               <div className="flex flex-wrap gap-2">
                 {localData.skills.map((skill, index) => (
                   <div key={index} className="flex items-center gap-2">
@@ -183,7 +187,9 @@ const Edit = () => {
 
             {/* EXPERIENCE */}
             <div className="mb-6">
-              <h3 className="text-lg font-semibold mb-2">Experience</h3>
+              <h3 className="text-lg font-semibold mb-2 pb-1 border-b-2">
+                Experience
+              </h3>
               {localData.experience.map((exp, index) => (
                 <div key={index} className="mb-4">
                   {isEditing ? (
@@ -259,7 +265,9 @@ const Edit = () => {
 
             {/* EDUCATION */}
             <div className="mb-6">
-              <h3 className="text-lg font-semibold mb-2">Education</h3>
+              <h3 className="text-lg font-semibold mb-2 pb-1 border-b-2">
+                Education
+              </h3>
               {localData.education.map((edu, index) => (
                 <div key={index} className="mb-4">
                   {isEditing ? (

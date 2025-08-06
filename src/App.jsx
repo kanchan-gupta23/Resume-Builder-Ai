@@ -1,5 +1,5 @@
 import React from "react";
-import ResumeTemplate from "./ResumeTemplate";
+import ResumeTemplate from "./component/ResumeTemplate";
 import { BrowserRouter } from "react-router-dom";
 
 function App() {
